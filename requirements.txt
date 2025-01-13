@@ -1,0 +1,7 @@
+pytest
+pytest-playwright
+pytest-xdist
+python-dotenv
+playwright
+pytest-html
+playwright install
