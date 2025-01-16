@@ -4,4 +4,5 @@ pytest-xdist
 python-dotenv
 playwright
 pytest-html
+pytest-bdd
 playwright install
