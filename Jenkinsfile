@@ -50,7 +50,7 @@ pipeline {
                     // Run tests using pytest
                     bat '''
                     call venv\\Scripts\\activate
-                    pytest --html=reports/report.html --self-contained-html
+                    pytest --html=reports/report.html --css=reports/assets/style.css
                     '''
                 }
             }
