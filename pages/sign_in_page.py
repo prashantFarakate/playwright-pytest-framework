@@ -10,7 +10,8 @@ class SignInPage(BasePage):
         self.password_input = "input[name='password']"
         self.signin_button = "button:has-text('Sign in')"
         # self.error_message = 'span:has-text("We don\'t recognise that email")'
-        self.error_message = "div.sb-form-message--error:has-text('We don\\'t recognise that email')"
+        # self.error_message = "div.sb-form-message--error:has-text('We don\\'t recognise that email')"
+        self.error_message = "#form-message-general"
 
     def enter_email(self, email):
         self.fill(self.email_input, email)
