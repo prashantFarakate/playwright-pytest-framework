@@ -50,7 +50,7 @@ pipeline {
                     // Run tests using pytest
                     bat '''
                     call venv\\Scripts\\activate
-                    pytest
+                    pytest --html=reports/report.html --self-contained-html
                     '''
                 }
             }
@@ -59,6 +59,9 @@ pipeline {
 
     post {
         always {
+            // Archive test reports
+            archiveArtifacts artifacts: 'reports\\report.html', fingerprint: true
+
             echo 'Pipeline execution completed.'
             cleanWs()  // Clean workspace after pipeline execution
         }
