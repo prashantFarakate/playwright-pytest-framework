@@ -6,9 +6,11 @@ Key Features:
 - Page Object Model (POM) implementation for better maintainability
 - Pytest fixtures for common setup/teardown operations
 - Parallel test execution support
-- Detailed HTML reports 
 - Custom pytest markers for test categorization
 - Data-driven testing
+- BDD (pytest-bdd)
+- CICD - Jenkins & Github Actions
+- Reporting - Allure Report, Pytest-HTML Report
 
 Tech Stack:
 ----------
