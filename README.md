@@ -17,8 +17,7 @@ Tech Stack:
 - Python 3.12
 - Playwright
 - Pytest
-- pytest-xdist (parallel execution)
-- pytest-html (reporting)
+- Allure Reporting
 
 
 
