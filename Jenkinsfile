@@ -50,9 +50,18 @@ pipeline {
                     // Run tests using pytest
                     bat '''
                     call venv\\Scripts\\activate
-                    pytest --html=reports/report.html --css=reports/assets/style.css
+                    pytest --alluredir=reports/allure-results --html=reports/report.html --css=reports/assets/style.css
                     '''
                 }
+            }
+        }
+
+        stage('Generate Allure Report') {
+            steps {
+                bat '''
+                allure generate reports/allure-results --clean -o reports/allure-report
+                allure open reports/allure-report
+                '''
             }
         }
     }
@@ -61,6 +70,7 @@ pipeline {
         always {
             // Archive test reports
             archiveArtifacts artifacts: 'reports\\report.html', fingerprint: true
+            archiveArtifacts artifacts: 'reports/allure-report/**', fingerprint: true
 
             echo 'Pipeline execution completed.'
             cleanWs()  // Clean workspace after pipeline execution

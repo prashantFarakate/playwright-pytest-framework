@@ -1,32 +1,46 @@
-name : Playwright Pytest Framework
+name: Playwright Pytest Framework
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+push:
+ branches:
+   - main
+pull_request:
+ branches:
+   - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+build:
+ runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+ steps:
+   - name: Checkout code
+     uses: actions/checkout@v3
 
-      - name: set up python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.12'
+   - name: Set up Python
+     uses: actions/setup-python@v4
+     with:
+       python-version: '3.12'
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip 
-          pip install -r requirements.txt
-          playwright install
-          
-      - name: Run Tests
-        run: pytest
+   - name: Install dependencies
+     run: |
+       python -m pip install --upgrade pip 
+       pip install -r requirements.txt
+       playwright install
 
+   - name: Run Tests with Allure
+     run: pytest --alluredir=reports/allure-results
+
+   - name: Generate HTML Report
+     run: pytest --html=reports/report.html --self-contained-html
+
+   - name: Archive Allure Reports
+     uses: actions/upload-artifact@v3
+     with:
+       name: allure-reports
+       path: reports/allure-results
+
+   - name: Archive HTML Report
+     uses: actions/upload-artifact@v3
+     with:
+       name: html-report
+       path: reports/report.html

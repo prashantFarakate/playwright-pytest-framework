@@ -1,0 +1,4 @@
+[32mINFO    [0m BBCTests:test_signin.py:14 Starting Sign in test
+[32mINFO    [0m BBCTests:test_signin.py:25 Sign-in successful
+[32mINFO    [0m BBCTests:test_signin.py:34 Sign-out successful
+[32mINFO    [0m BBCTests:test_signin.py:35 Sing-in testcase passed successfully

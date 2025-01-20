@@ -5,3 +5,4 @@ python-dotenv
 playwright
 pytest-html
 pytest-bdd
+allure-pytest

@@ -1,5 +1,4 @@
 import json
-
 import pytest
 from playwright.sync_api import expect
 from pages.home_page import HomePage
@@ -7,7 +6,13 @@ from pages.sign_in_page import SignInPage
 from pages.sign_out_page import SignOutPage
 from utilities.logger import bbc_logs
 logger = bbc_logs()
+import allure
 
+
+@allure.severity(allure.severity_level.CRITICAL)
+@allure.story("User SignIn Functionality")
+@allure.feature("Login Page")
+@allure.title("Verify SignIn with valid credentials")
 @pytest.mark.smoke
 def test_signin(page, config):
 
@@ -34,6 +39,10 @@ def test_signin(page, config):
     logger.info("Sign-out successful")
     logger.info("Sing-in testcase passed successfully")
 
+@allure.severity(allure.severity_level.NORMAL)
+@allure.story("User SignIn Functionality")
+@allure.feature("Login Page")
+@allure.title("Verify SignIn with invalid credentials")
 def test_invalid_signin(page, config):
     logger.info("Starting invalid sign-in test")
     home_page = HomePage(page)

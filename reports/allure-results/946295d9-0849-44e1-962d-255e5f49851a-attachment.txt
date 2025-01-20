@@ -1,0 +1,3 @@
+[32mINFO    [0m BBCTests:test_homepage.py:16 BBC Home page navigation test starts
+[32mINFO    [0m BBCTests:test_homepage.py:23 Title validation successful
+[32mINFO    [0m BBCTests:test_homepage.py:32 BBC Home page navigation test successfully passed

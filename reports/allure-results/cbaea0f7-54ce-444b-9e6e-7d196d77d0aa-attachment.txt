@@ -1,0 +1,2 @@
+[32mINFO    [0m BBCTests:test_signin.py:38 Starting invalid sign-in test
+[32mINFO    [0m BBCTests:test_signin.py:52 Invalid credentials test passed

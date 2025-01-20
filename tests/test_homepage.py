@@ -2,7 +2,12 @@ import pytest
 from pages.home_page import HomePage
 from utilities.logger import bbc_logs
 logger = bbc_logs()
+import allure
 
+@allure.severity(allure.severity_level.NORMAL)
+@allure.story("User Home Page Functionality")
+@allure.feature("Home Page")
+@allure.title("Verifies BBC Home Page loads and essential elements are present")
 @pytest.mark.regression
 def test_bbc_homepage_navigation(page, config):
     """

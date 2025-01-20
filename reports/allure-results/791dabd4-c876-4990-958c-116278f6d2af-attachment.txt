@@ -1,0 +1,2 @@
+2025-01-20 11:49:53,741 : INFO : BBCTests : Starting invalid sign-in test
+2025-01-20 11:50:09,182 : INFO : BBCTests : Invalid credentials test passed
