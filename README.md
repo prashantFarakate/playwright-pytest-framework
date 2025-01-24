@@ -1,7 +1,7 @@
 # Playwright-Pytest Framework for UI Automation
 
 ## Description
-- A robust UI automation framework for testing web applications using Playwright and Pytest, integrated with CI/CD pipelines for seamless automation and reporting.
+A robust UI automation framework for testing web applications using Playwright and Pytest, integrated with CI/CD pipelines for seamless automation and reporting.
 
 ## Features
 - UI Testing: Automate end-to-end UI scenarios using Playwright.
