@@ -1,0 +1,9 @@
+2025-01-24 13:37:09,981 : INFO : BBCTests : Logger initialized successfully
+2025-01-24 13:37:09,991 : INFO : BBCTests : Logger initialized successfully
+2025-01-24 13:37:20,523 : INFO : BBCTests : BBC Home page navigation test starts
+2025-01-24 13:37:23,801 : INFO : BBCTests : Title validation successful
+2025-01-24 13:37:24,903 : INFO : BBCTests : BBC Home page navigation test successfully passed
+2025-01-24 13:37:25,926 : INFO : BBCTests : Starting Sign in test
+2025-01-24 13:37:31,808 : INFO : BBCTests : Sign-in successful
+2025-01-24 13:37:39,932 : INFO : BBCTests : Starting invalid sign-in test
+2025-01-24 13:37:45,747 : INFO : BBCTests : Invalid credentials test passed
